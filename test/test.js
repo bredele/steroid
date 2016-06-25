@@ -35,7 +35,7 @@ test('should substitute array', (assert) => {
   assert.plan(1)
   var arr = ['olivier', 'klara']
   stream`<button>hello ${arr}</button>`
-    .pipe(writer( result => assert.equal(result, '<button>hello olivier klara</button>')))
+    .pipe(writer( result => assert.equal(result, '<button>hello olivierklara</button>')))
 })
 
 
@@ -62,7 +62,6 @@ test('should substitute multiple streams', (assert) => {
 function writer(cb) {
   var result = ''
   return through( chunk => {
-    console.log(chunk.toString())
     result += chunk
   }, () => {
     cb(result)
