@@ -8,13 +8,13 @@ Stream HTML in server side and front end using template strings
 
 We've been taught that using template engines to separate concerns is of utmost importance when building a scalable and maintainable web applications. When it is true in principle, templates most of the time address the same concern than the display logic and encourage a poor separation of concerns.
 
-  I believe that separation of concerns is achieved by encapsulating a section of code with a well-defined interface which can easily be reused like **streams**.
+  > I believe that separation of concerns is achieved by encapsulating a section of code with a well-defined interface which can easily be reused like **streams**.
 
 Using streams to define a proper template engine allows you to snap together templates and modules like lego bricks.
 
 Most templates out there have different level of abstraction. They can be new languages and limit the developers by their non-programming nature. As a web developer you know JavaScript and you should not have to learn a new language especially in an era where WEB evolves so fast.
 
-  Using **template strings** you can create templates in JavaScript with the flexibility it is known for.
+  > Using **template strings** you can create templates in JavaScript with the flexibility it is known for.
 
 If HTML depends on JavaScript, template and display logic should be one unit and separation of concerns should be achieved by your architecture.
 
