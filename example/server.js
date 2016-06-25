@@ -20,6 +20,9 @@ http.createServer((req, res) => {
     <button class='${classes}'>
       hello <b>${name}</b>
     </button>
+    <ul>
+      ${classes.map(item => html`<li>item</li>`)}
+    </ul>
     <article>${fs.createReadStream(__dirname + '/article.html')}</article>
   </section>`.pipe(res)
 }).listen(8080)
