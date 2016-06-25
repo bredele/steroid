@@ -2,6 +2,7 @@
 
 Stream HTML in server side and front end using template strings
 
+[![travis]](https://travis-ci.org/bredele/html-stream.svg)
 [![NPM](https://nodei.co/npm/html-stream.png)](https://nodei.co/npm/html-stream/)
 
 ## Usage
