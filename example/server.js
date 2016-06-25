@@ -14,6 +14,7 @@ var html = require('..')
 http.createServer((req, res) => {
   let name = 'olivier'
   let classes = ['selected', 'button']
+  let files = ['article1.html', 'article2.html']
   res.writeHead(200, {"Content-Type": "text/html"});
   html`
   <section>
@@ -21,8 +22,7 @@ http.createServer((req, res) => {
       hello <b>${name}</b>
     </button>
     <ul>
-      ${classes.map(item => html`<li>item</li>`)}
+      ${files.map(item => html`<li>${fs.createReadStream(__dirname + '/' + item )}</li>`)}
     </ul>
-    <article>${fs.createReadStream(__dirname + '/article.html')}</article>
   </section>`.pipe(res)
 }).listen(8080)
