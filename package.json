@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js",
-    "example" : "node example/server.js"
+    "example": "node example/server.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,9 @@
   "homepage": "https://github.com/bredele/html-stream#readme",
   "devDependencies": {
     "tape": "^4.6.0",
+    "through": "^2.3.8"
+  },
+  "dependencies": {
     "through": "^2.3.8"
   }
 }
