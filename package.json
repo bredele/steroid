@@ -4,7 +4,8 @@
   "description": "stream html using template strings",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tape test/*.js",
+    "example" : "node example/server.js"
   },
   "repository": {
     "type": "git",

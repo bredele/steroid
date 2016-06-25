@@ -21,6 +21,7 @@ test('should substitute simple string', (assert) => {
     .pipe(writer( result => assert.equal(result, '<button>hello olivier!</button>')))
 });
 
+
 test('should substitute multiple strings', (assert) => {
   assert.plan(1)
   var name = 'olivier'
@@ -29,12 +30,14 @@ test('should substitute multiple strings', (assert) => {
     .pipe(writer(result => assert.equal(result, '<button>hello olivier and <span>klara</span></button>')))
 })
 
+
 test('should substitute array', (assert) => {
   assert.plan(1)
   var arr = ['olivier', 'klara']
   stream`<button>hello ${arr}</button>`
     .pipe(writer( result => assert.equal(result, '<button>hello olivier klara</button>')))
 })
+
 
 /**
  * Create writable stream.

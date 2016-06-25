@@ -17,9 +17,9 @@ module.exports = function(arr, ...args) {
   var stream = new Read
   stream._read = function() {}
   arr.forEach((str, index) => {
-    var value = args[index] || '';
+    var value = args[index] || ''
     stream.push(str + value)
   })
   stream.push(null)
   return stream
-};
+}
