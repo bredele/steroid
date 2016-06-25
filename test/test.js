@@ -62,6 +62,7 @@ test('should substitute multiple streams', (assert) => {
 function writer(cb) {
   var result = ''
   return through( chunk => {
+    console.log(chunk.toString())
     result += chunk
   }, () => {
     cb(result)

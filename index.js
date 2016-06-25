@@ -2,8 +2,7 @@
  * Module dependencies.
  */
 
-var Read = require('stream').Readable
-var through = require('through')
+var concat = require('lineup-stream')
 
 
 /**
@@ -15,30 +14,11 @@ var through = require('through')
  */
 
 module.exports = function(arr, ...args) {
-  var stream = new Read
-  var idx = 0
-  var end = arr.length
-  stream._read = function() {}
-  function next() {
+  var cp = []
+  arr.forEach((item, idx) => {
     var value = args[idx]
-    if(value && value.on && value.pipe) {
-      stream.push(arr[idx])
-      return value.pipe(through(
-        chunk => {
-          stream.push(chunk)
-        }, function() {
-          this.emit('end')
-          idx++
-          next()
-        }
-      ))
-    }
-    if(value instanceof Array) value = value.join(' ')
-    stream.push(arr[idx++] + (value || ''))
-    if(idx !== end) next()
-    else stream.push(null)
-  }
-
-  next()
-  return stream
+    cp.push(item)
+    if(value) cp.push(value instanceof Array ? concat(...value) : value)
+  })
+  return concat(...cp)
 }
