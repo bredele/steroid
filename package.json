@@ -1,0 +1,25 @@
+{
+  "name": "html-stream",
+  "version": "1.0.0",
+  "description": "stream html using template strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bredele/html-stream.git"
+  },
+  "keywords": [
+    "stream",
+    "html",
+    "template",
+    "es6"
+  ],
+  "author": "Olivier Wietrich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bredele/html-stream/issues"
+  },
+  "homepage": "https://github.com/bredele/html-stream#readme"
+}
