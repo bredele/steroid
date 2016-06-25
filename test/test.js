@@ -39,6 +39,14 @@ test('should substitute array', (assert) => {
 })
 
 
+test('should substitute stream', (assert) => {
+  assert.plan(1);
+  var name = 'olivier'
+  var child = stream`<span>${name}!</span>`
+  stream`<button>hello ${child}</button>`
+    .pipe(writer(result => assert.equal(result, '<button>hello <span>olivier!</span></button>')))
+})
+
 /**
  * Create writable stream.
  */
