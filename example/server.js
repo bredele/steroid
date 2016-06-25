@@ -11,5 +11,8 @@ var html = require('..')
  */
 
 http.createServer((req, res) => {
-  html`<button>hello</button>`.pipe(res)
+  let name = 'olivier'
+  html`<button>
+    hello <b>${name}</b>
+  </button>`.pipe(res)
 }).listen(8080)
