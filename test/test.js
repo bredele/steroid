@@ -15,10 +15,18 @@ test('should stream simple html element as string', (assert) => {
 
 
 test('should stream simple html element as string using interpolation', (assert) => {
-  assert.plan(1);
-  var name = 'olivier';
+  assert.plan(1)
+  var name = 'olivier'
   stream`<button>hello ${name}!</button>`
     .pipe(writer( result => assert.equal(result, '<button>hello olivier!</button>')))
+});
+
+test('should stream multiple html elements', (assert) => {
+  assert.plan(1)
+  var name = 'olivier'
+  var friend = 'klara'
+  stream`<button>hello ${name} and <span>${friend}</span></button>`
+    .pipe(writer(result => assert.equal(result, '<button>hello olivier and <span>klara</span></button>')))
 })
 
 /**
