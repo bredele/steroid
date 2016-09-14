@@ -15,10 +15,16 @@ var concat = require('lineup-stream')
 
 module.exports = function(arr, ...args) {
   var cp = []
-  arr.forEach((item, idx) => {
+  arr.map((item, idx) => {
     var value = args[idx]
     cp.push(item)
-    if(value) cp.push(value instanceof Array ? concat(...value) : value)
+    if(value) cp.push(value instanceof Array ? concat(...value) : transform(value))
   })
   return concat(...cp)
+}
+
+
+function transform(value) {
+  if(typeof value === 'function') value = value()
+  return value
 }

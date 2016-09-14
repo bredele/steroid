@@ -30,6 +30,14 @@ test('should substitute multiple strings', (assert) => {
     .pipe(writer(result => assert.equal(result, '<button>hello olivier and <span>klara</span></button>')))
 })
 
+test('should substitute function', (assert) => {
+  assert.plan(1)
+  var name = function() {
+    return 'olivier'
+  }
+  stream`<button>${name}</button>`
+    .pipe(writer(result => assert.equal(result, '<button>olivier</button>')))
+})
 
 test('should substitute array', (assert) => {
   assert.plan(1)
