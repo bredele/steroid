@@ -1,6 +1,6 @@
 # html-stream
 
-Stream HTML in server side and front end using template strings
+Stream HTML in server side and front end using [template strings](https://developers.google.com/web/updates/2015/01/ES6-Template-Strings).
 
 [![Build Status](https://travis-ci.org/bredele/html-stream.svg?branch=master)](https://travis-ci.org/bredele/html-stream)
 ## Usage
@@ -18,6 +18,9 @@ html`
   </section>
 `.pipe(dest)
 ```
+
+This module allows to substitute primitives, functions, promises and streams in your HTML. Composing and returning HTML on server side has never been so easy!
+
 [see examples](https://github.com/bredele/html-stream/tree/master/example)
 
 ## Motivations
