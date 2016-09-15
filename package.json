@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/bredele/html-stream#readme",
   "devDependencies": {
+    "promises-a": "^2.3.0",
     "tape": "^4.6.0",
     "through": "^2.3.8"
   },
