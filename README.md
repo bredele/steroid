@@ -2,14 +2,13 @@
 
 Stream HTML in server side and front end using template strings
 
-[![NPM](https://nodei.co/npm/html-stream.png)](https://nodei.co/npm/html-stream/)
-
 [![Build Status](https://travis-ci.org/bredele/html-stream.svg?branch=master)](https://travis-ci.org/bredele/html-stream)
 ## Usage
 
 ```js
 var html = require('html-stream')
 var arr = ['olivier', 'klara']
+
 html`
   <section>
     <ul>
@@ -35,6 +34,11 @@ Most templates out there have different level of abstraction. They can be new la
 
 If HTML depends on JavaScript, template and display logic should be one unit and separation of concerns should be achieved by your architecture.
 
+## Contribution
+
+For questions, feedback, bug reports and or feature requests please use the issue list of this repo.
+
+[![NPM](https://nodei.co/npm/html-stream.png)](https://nodei.co/npm/html-stream/)
 
 ## Licence
 
