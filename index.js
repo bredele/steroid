@@ -18,13 +18,7 @@ module.exports = function(arr, ...args) {
   arr.map((item, idx) => {
     var value = args[idx]
     cp.push(item)
-    if(value) cp.push(value instanceof Array ? concat(...value) : transform(value))
+    if(value) cp.push(value instanceof Array ? concat(...value) : value)
   })
   return concat(...cp)
-}
-
-
-function transform(value) {
-  if(typeof value === 'function') value = value()
-  return value
 }
