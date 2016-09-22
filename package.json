@@ -1,6 +1,6 @@
 {
   "name": "html-stream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "stream html using template strings",
   "main": "index.js",
   "scripts": {
