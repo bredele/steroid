@@ -31,12 +31,13 @@ http.createServer((req, res) => {
 
 function navigation() {
   return html`
-  <nav>${async().then(link)}</nav>
+  <nav>${async(['klara', 'olivier']).then(link)}</nav>
   `
 }
 
+
 /**
- * Create links
+ * Create navigation
  *
  * @param {Array} data
  * @return {Stream}
@@ -72,10 +73,12 @@ function main() {
  * @api private
  */
 
-function async() {
-  var def = promise()
-  setTimeout(function() {
-	   def.fulfill(['olivier', 'klara'])
-  }, 1000)
-  return def.promise
-}
+
+ function async(value, bool) {
+   var def = promise()
+   setTimeout(function() {
+ 	   if(!bool) def.fulfill(value)
+     else def.reject('error')
+   }, 10)
+   return def.promise
+ }
