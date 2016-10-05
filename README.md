@@ -5,7 +5,7 @@
 Steroid is a powerful HTML-based templating engine that runs on Node.js and in the browser. It does all the heavy lifting for you and supports streaming, partials, asynchronous rendering (with promises and streams) and more.
 [Learn more]() about Steroid and even [Try it Online]()!
 
-[![Build Status](https://travis-ci.org/bredele/html-stream.svg?branch=master)](https://travis-ci.org/bredele/steroid)
+[![Build Status](https://travis-ci.org/bredele/steroid.svg?branch=master)](https://travis-ci.org/bredele/steroid)
 
 ## Usage
 
