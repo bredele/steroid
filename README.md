@@ -6,6 +6,10 @@ Steroid is a powerful HTML-based templating engine that runs on Node.js and in t
 [Learn more]() about Steroid and even [Try it Online]()!
 
 [![Build Status](https://travis-ci.org/bredele/steroid.svg?branch=master)](https://travis-ci.org/bredele/steroid)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vomitjs/Lobby)
+[![NPM](https://img.shields.io/npm/v/steroid.svg)](https://www.npmjs.com/package/steroid)
+[![Downloads](https://img.shields.io/npm/dm/steroid.svg)](http://npm-stat.com/charts.html?package=steroid)
+
 
 ## Usage
 
