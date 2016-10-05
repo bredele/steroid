@@ -1,7 +1,7 @@
 {
-  "name": "html-stream",
-  "version": "1.0.1",
-  "description": "stream html using template strings",
+  "name": "steroid",
+  "version": "0.9.0",
+  "description": "A template engine on steroid.",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bredele/html-stream.git"
+    "url": "git+https://github.com/bredele/steroid.git"
   },
   "keywords": [
     "stream",
@@ -20,9 +20,9 @@
   "author": "Olivier Wietrich",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bredele/html-stream/issues"
+    "url": "https://github.com/bredele/steroid/issues"
   },
-  "homepage": "https://github.com/bredele/html-stream#readme",
+  "homepage": "https://github.com/bredele/steroid#readme",
   "devDependencies": {
     "promises-a": "^2.3.0",
     "tape": "^4.6.0",

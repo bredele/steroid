@@ -1,47 +1,55 @@
-# html-stream
+# Steroid
 
-Stream HTML in server side and front end using [template strings](https://developers.google.com/web/updates/2015/01/ES6-Template-Strings).
+  > [Vomit](http://github.com/bredele/vomit) server side engine
+
+Steroid is a powerful HTML-based templating engine that runs on Node.js and in the browser. It does all the heavy lifting for you and supports streaming, partials, asynchronous rendering (with promises and streams) and more.
+[Learn more]() about Steroid and even [Try it Online]()!
 
 [![Build Status](https://travis-ci.org/bredele/html-stream.svg?branch=master)](https://travis-ci.org/bredele/html-stream)
+
 ## Usage
 
+No weird syntax or compilation. Steroid is pure HTML and JavaScript and a minute is enough to get your hands on it. 
+
 ```js
-var html = require('html-stream')
-var arr = ['olivier', 'klara']
+var html = require('steroid')
+var country = 'France'
 
 html`
-  <section>
-    <ul>
-      ${arr.map(item => html`<li>${item}</li>`)}
-    </ul>
-    <footer>${fs.createReadStream(__dirname + '/footer.html')}</footer>
-  </section>
+  <article>
+    <h2>Hello ${country}</h2>
+    ${fetch('/api/weather?' + country).then(weather)}
+  </article>
 `.pipe(dest)
+
+function weather(forecast) {
+  return html`
+  <div class="weather">
+    Weather is ${forecast.result}
+    <ul>forecast.cities.map(city => {
+      return html`<li>${city}</li>`
+    })</ul>
+  </div>
+  `
+}
 ```
 
-This module allows to substitute primitives, functions, promises and streams in your HTML. Composing and returning HTML on server side has never been so easy!
+Even if Steroid works in your browser, we recommend you to use [vomit](http://github.com/bredele/vomit) to build rich applications in the front end. Vomit uses the same syntax than Steroid but leverage DOM instead of Streams.
 
-[see examples](https://github.com/bredele/html-stream/tree/master/example)
 
-## Motivations
+## Installation
 
-We've been taught that using template engines to separate concerns is of utmost importance when building a scalable and maintainable web applications. When it is true in principle, templates most of the time address the same concern than the display logic and encourage a poor separation of concerns.
+```shell
+npm install -g steroid
+```
 
-  > I believe that separation of concerns is achieved by encapsulating a section of code with a well-defined interface which can easily be reused like **streams**.
+## Question
 
-Using streams to define a proper template engine allows you to snap together templates and modules like lego bricks.
-
-Most templates out there have different level of abstraction. They can be new languages and limit the developers by their non-programming nature. As a web developer you know JavaScript and you should not have to learn a new language especially in an era where WEB evolves so fast.
-
-  > Using **template strings** you can create templates in JavaScript with the flexibility it is known for.
-
-If HTML depends on JavaScript, template and display logic should be one unit and separation of concerns should be achieved by your architecture.
+For questions, support, bug reports and or feature requests please use the issue list of this repo and make sure it's not present yet in our reporting checklist.
 
 ## Contribution
 
-For questions, feedback, bug reports and or feature requests please use the issue list of this repo.
-
-[![NPM](https://nodei.co/npm/html-stream.png)](https://nodei.co/npm/html-stream/)
+Steroid is an open source project and would not exist without its community. If you want to participate please make sure to read the contributing guide before making a pull request. If you have any steroid-related project please let everyone know in our wiki.
 
 ## Licence
 

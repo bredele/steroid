@@ -31,7 +31,7 @@ http.createServer((req, res) => {
 
 function navigation() {
   return html`
-  <ul>${async(['klara', 'olivier']).then(link)}</ul>
+  <ul>${async(['klara', 'olivier', 'ellie']).then(link)}</ul>
   `
 }
 
