@@ -35,9 +35,9 @@ Type `npm start` in your terminal and open http://localhost:8000 in your browser
 
 Returning some HTML is a simple as that.
 
-## Placeholder
+## Placeholders
 
-Steroid makes possible to substitute what is between `${}` with any kind of valid JavaScript expression. Please update the example as below:
+Steroid makes possible to substitute what is between `${}` with any kind of valid JavaScript expression. Let's make our example a little bit more configurable and read the content from a file:
 
 
 ```js
@@ -58,9 +58,6 @@ server.listen(8000)
 ```
 
 Expressions between `${}` are called Steroid [Placeholders](/docs/placeholders). Placeholders are expressions made of primitives (strings, numbers, booleans, etc), arrays, objects, promises or even streams.
-
-  > the example above insert the content of the file lorem.txt from a [fs](https://nodejs.org/api/fs.html) stream.
-
 
 ## Composition
 
@@ -100,4 +97,4 @@ The 5 minutes are now gone! We hope you got a gist of what Steroid is capable to
 
 ## Note
 
-Have you noticed the `.pipe` after the steroid template? It is because Steroid returns a Stream and not a String. Most template engines out there buffer up the entire content of a template into memory before sending anything to the client. Without talking about memory issues, this is poor user experience because users will have to wait for the whole page to be buffered before receiving any content. By using streams, Steroid will server to clients one chunk of HTML at a time immediately as they are received. This is especially usefull when dealing with IO bounds.
+Have you noticed the `.pipe` after the steroid template? It is because Steroid returns a Stream and not a String. Most template engines out there buffer up the entire content of a template into memory before sending anything to the client. Without talking about memory issues, this is poor user experience because users will have to wait for the whole page to be buffered before receiving any content. By using streams, Steroid will server to clients one chunk of HTML at a time immediately as they are received. This is especially useful when dealing with IO bounds.
