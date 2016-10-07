@@ -3,7 +3,7 @@
   > [Vomit](http://github.com/bredele/vomit) server side engine
 
 Steroid is a powerful HTML-based templating engine that runs on Node.js and in the browser. It does all the heavy lifting for you and supports streaming, partials, asynchronous rendering (with promises and streams) and more.
-[Learn more]() about Steroid and even [Try it Online]()!
+[Learn more](https://github.com/bredele/steroid/tree/master/docs) about Steroid and even [Try it Online]()!
 
 [![Build Status](https://travis-ci.org/bredele/steroid.svg?branch=master)](https://travis-ci.org/bredele/steroid)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg?style=flat-square)](https://gitter.im/vomitjs/Lobby)
@@ -44,7 +44,7 @@ Even if Steroid works in your browser, we recommend you to use [vomit](http://gi
 ## Installation
 
 ```shell
-npm install -g steroid
+npm install steroid --save
 ```
 
 ## Question
