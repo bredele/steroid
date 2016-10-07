@@ -2,7 +2,7 @@ Let's start with a quick 5 minutes tutorial of Steroid features.
 
 ## Hello World
 
-Let's create a simple web server returning a hello world string using [expressjs]http://expressjs.com/() and Steroid. We created the repo [steroid-gettingstarted](https://github.com/bredele/steroid-gettingstarted)) with everything you need to follow this tutorial. Please type in your terminal:
+Let's create a simple web server returning a hello world string using [expressjs](http://expressjs.com/() and Steroid. We created the repo [steroid-gettingstarted](https://github.com/bredele/steroid-gettingstarted) with everything you need to follow this tutorial. Please type in your terminal:
 
 ```shell
 # install steroid and express
@@ -28,7 +28,7 @@ server.use('*', (req, res) => {
 server.listen(8000)
 ```
 
-Type `npm start` in your terminal and open http://localhost:8000 in your browser.
+Type `npm start` in your terminal and open [http://localhost:8000](http://localhost:8000) in your browser.
 
   > if you like to see and understand by yourself, you will find all examples in the file called `server.js`
 
