@@ -37,7 +37,7 @@ Returning some HTML is a simple as that.
 
 ## Placeholders
 
-Steroid makes possible to substitute what is between `${}` with any kind of valid JavaScript expression. Let's make our example a little bit more configurable and read the content from a file:
+Steroid makes possible to substitute what is between `${}` with any kind of valid JavaScript expression. Let's make our example a little bit more configurable and read the content from a file (using [fs](https://nodejs.org/api/fs.html) streams):
 
 
 ```js
