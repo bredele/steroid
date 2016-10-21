@@ -3,6 +3,7 @@
   > [Vomit](http://github.com/bredele/vomit) server side engine
 
 Steroid is a powerful HTML-based templating engine that runs on Node.js and in the browser. It does all the heavy lifting for you and supports streaming, partials, asynchronous rendering (with promises and streams) and more.
+
 [Learn more](https://github.com/bredele/steroid/tree/master/docs) about Steroid and even [Try it Online](http://requirebin.com/?gist=bredele/cf00e520874e30a7b628787ebdad290f)!
 
 [![Build Status](https://travis-ci.org/bredele/steroid.svg?branch=master)](https://travis-ci.org/bredele/steroid)
@@ -40,6 +41,7 @@ function weather(forecast) {
 
 Even if Steroid works in your browser, we recommend you to use [vomit](http://github.com/bredele/vomit) to build rich applications in the front end. Vomit uses the same syntax than Steroid but leverage DOM instead of Streams.
 
+Check out [examples](https://github.com/bredele/steroid/tree/master/examples) and [docs](https://github.com/bredele/steroid/tree/master/docs) for more information.
 
 ## Installation
 
@@ -47,13 +49,17 @@ Even if Steroid works in your browser, we recommend you to use [vomit](http://gi
 npm install steroid --save
 ```
 
+[![NPM](https://nodei.co/npm/vomit.png)](https://nodei.co/npm/steroid/)
+
 ## Question
 
-For questions, support, bug reports and or feature requests please use the issue list of this repo and make sure it's not present yet in our reporting checklist.
+For questions and feedback please use our [twitter account](https://twitter.com/bredeleca). For support, bug reports and or feature requests please make sure to read our
+<a href="https://github.com/bredele/contributing-guide" target="_blank">community guideline</a> and use the issue list of this repo and make sure it's not present yet in our reporting checklist.
 
 ## Contribution
 
-Steroid is an open source project and would not exist without its community. If you want to participate please make sure to read the contributing guide before making a pull request. If you have any steroid-related project please let everyone know in our wiki.
+Steroid is an open source project and would not exist without its community. If you want to participate please make sure to read our <a href="https://github.com/bredele/contributing-guide" target="_blank">guideline</a> before making a pull request. If you have any steroid-related project, component or other let everyone know in our wiki.
+
 
 ## Licence
 
