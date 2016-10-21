@@ -49,7 +49,7 @@ Check out [examples](https://github.com/bredele/steroid/tree/master/examples) an
 npm install steroid --save
 ```
 
-[![NPM](https://nodei.co/npm/vomit.png)](https://nodei.co/npm/steroid/)
+[![NPM](https://nodei.co/npm/steroid.png)](https://nodei.co/npm/steroid/)
 
 ## Question
 
