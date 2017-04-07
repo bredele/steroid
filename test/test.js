@@ -14,11 +14,25 @@ test('should stream html element', (assert) => {
 })
 
 
-test('should substitute simple string', (assert) => {
+test('should substitute string', (assert) => {
   assert.plan(1)
   var name = 'olivier'
   stream`<button>hello ${name}!</button>`
     .pipe(writer( result => assert.equal(result, '<button>hello olivier!</button>')))
+})
+
+test('should substitute number', (assert) => {
+  assert.plan(1)
+  var id = 0
+  stream`<button>hello ${id}!</button>`
+    .pipe(writer( result => assert.equal(result, '<button>hello 0!</button>')))
+})
+
+test('should substitute boolean', (assert) => {
+  assert.plan(1)
+  var bool = true
+  stream`<button>Is it ${bool}?</button>`
+    .pipe(writer( result => assert.equal(result, '<button>Is it true?</button>')))
 })
 
 test('should substitute multiple strings', (assert) => {
