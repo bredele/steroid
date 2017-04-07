@@ -19,8 +19,7 @@ test('should substitute simple string', (assert) => {
   var name = 'olivier'
   stream`<button>hello ${name}!</button>`
     .pipe(writer( result => assert.equal(result, '<button>hello olivier!</button>')))
-});
-
+})
 
 test('should substitute multiple strings', (assert) => {
   assert.plan(1)

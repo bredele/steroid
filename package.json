@@ -29,7 +29,7 @@
     "through": "^2.3.8"
   },
   "dependencies": {
-    "lineup-stream": "^1.1.1",
+    "lineup-stream": "^1.2.1",
     "through": "^2.3.8"
   }
 }
