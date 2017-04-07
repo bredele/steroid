@@ -35,6 +35,13 @@ test('should substitute boolean', (assert) => {
     .pipe(writer( result => assert.equal(result, '<button>Is it true?</button>')))
 })
 
+test('should substitute undefined value with empty strings', (assert) => {
+  assert.plan(1)
+  var val = undefined
+  stream`<button>${val}</button>`
+    .pipe(writer( result => assert.equal(result, '<button></button>')))
+})
+
 test('should substitute multiple strings', (assert) => {
   assert.plan(1)
   var name = 'olivier'
