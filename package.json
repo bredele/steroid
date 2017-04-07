@@ -1,6 +1,6 @@
 {
   "name": "steroid",
-  "version": "0.9.0",
+  "version": "1.0.1",
   "description": "A template engine on steroid.",
   "main": "index.js",
   "scripts": {
