@@ -19,15 +19,19 @@ Steroid is a powerful HTML-based templating engine that runs on Node.js and in t
 No weird syntax or compilation. Steroid is pure HTML and JavaScript and a minute is enough to get your hands on it.
 
 ```javascript
-var html = require('steroid')
+const html = require('steroid')
+const http = require('http')
 var country = 'France'
 
-html`
-  <article>
-    <h2>Hello ${country}</h2>
-    ${fetch('/api/weather?' + country).then(weather)}
-  </article>
-`.pipe(dest)
+http.createServer((req, res) => {
+  html`
+    <article>
+      <h2>Hello ${country}</h2>
+      ${fetch('/api/weather?' + country).then(weather)}
+    </article>
+  `.pipe(res)
+}).listen(3000)
+
 
 function weather(forecast) {
   return html`
