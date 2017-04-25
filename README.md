@@ -37,11 +37,13 @@ function weather(forecast) {
   return html`
   <div class="weather">
     Weather is ${forecast.result}
-    <ul>forecast.cities.map(city => {
-      return html`<li>${city}</li>`
-    })</ul>
+    <ul>${forecast.cities.map(city)}</ul>
   </div>
   `
+}
+
+function city(name) {
+  return html`<li>${name}</li>`
 }
 ```
 
