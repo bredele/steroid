@@ -21,9 +21,11 @@ No weird syntax or compilation. Steroid is pure HTML and JavaScript and a minute
 ```javascript
 const html = require('steroid')
 const http = require('http')
-var country = 'France'
 
 http.createServer((req, res) => {
+  const country = 'France'
+  
+  // steroid returns a stream
   html`
     <article>
       <h2>Hello ${country}</h2>
