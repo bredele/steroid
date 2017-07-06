@@ -25,8 +25,7 @@
   "homepage": "https://github.com/bredele/steroid#readme",
   "devDependencies": {
     "promises-a": "^2.3.0",
-    "tape": "^4.6.0",
-    "through": "^2.3.8"
+    "tape": "^4.6.0"
   },
   "dependencies": {
     "lineup-stream": "^1.2.1",

@@ -2,6 +2,7 @@
  * Test dependencies.
  */
 
+var Readable = require('stream').Readable
 var stream = require('..')
 var through = require('through')
 var test = require('tape')
@@ -82,6 +83,32 @@ test('should substitute multiple streams', (assert) => {
   stream`<ul>${names.map(item => stream`<li>${item}</li>`)}</ul>`
     .pipe(writer(result => assert.equal(result, '<ul><li>olivier</li><li>klara</li></ul>')))
 })
+
+test('should return a duplex stream', assert => {
+  assert.plan(1)
+  reader()
+    .pipe(stream(data => {
+      return stream`<li>${data}</li>`
+    }))
+    .pipe(writer(result => assert.equal(result, '<li>hello</li><li>world</li>')))
+})
+
+
+/**
+ * Create readable stream.
+ */
+
+function reader () {
+  var readable = new Readable
+  readable._read = function () {}
+  readable.push('hello')
+  setTimeout(function () {
+    readable.push('world')
+    readable.push(null)
+  }, 300)
+  return readable
+}
+
 
 /**
  * Create writable stream.

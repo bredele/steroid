@@ -3,6 +3,7 @@
  */
 
 var concat = require('lineup-stream')
+var through = require('through')
 
 
 /**
@@ -14,6 +15,11 @@ var concat = require('lineup-stream')
  */
 
 module.exports = function(arr, ...args) {
+  if (typeof arr === 'function') {
+    return through(function (data) {
+      concat(arr(data)).on('data', (chunk) => this.emit('data', chunk))
+    })
+  }
   var cp = []
   arr.map((item, idx) => {
     var value = args[idx]
